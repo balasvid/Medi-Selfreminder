@@ -17,7 +17,5 @@ Medi-Selfreminder sorgt für eine zuverlässige Medikamenteneinnahme und unterst
 ### Zielgruppe:
 **Patienten**: Personen, die regelmässig Medikamente einnehmen müssen.
 
-### Nutzen:
-**Zuverlässige Medikamenteneinnahme**: Unterstützung durch Erinnerungen und einfache Verwaltung.
 
 
