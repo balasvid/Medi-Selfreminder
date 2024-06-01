@@ -20,4 +20,4 @@ Die Idee ist eine App zu erstellen mit der Nutzer ihre Medikamentenliste verwalt
 ### Nutzen:
 **Zuverlässige Medikamenteneinnahme**: Unterstützung durch Erinnerungen und einfache Verwaltung.
 
-Medi-SelfReminder sorgt für eine zuverlässige Medikamenteneinnahme und unterstützt Benutzer durch Erinnerungen und eine benutzerfreundliche Verwaltung ihrer Medikamentenlisten.
+Medi-Selfreminder sorgt für eine zuverlässige Medikamenteneinnahme und unterstützt Benutzer durch Erinnerungen und eine benutzerfreundliche Verwaltung ihrer Medikamentenlisten.
