@@ -7,7 +7,7 @@ Team: Sen Sutnuka & Vidya Balasubramaniam
 Die Idee ist eine App zu erstellen mit der Nutzer ihre Medikamentenliste verwalten können und Erinnerungen per SMS erhalten, um ihre Medikamente rechtzeitig einzunehmen.
 
 ### Funktionen:
-1. **Benutzerkonten**:
+1. **Benutzerkonto**:
    Registrierung und Login für personalisierte Medikamentenlisten.
 2. **Medikamentenverwaltung**:
    Hinzufügen, Bearbeiten und Löschen von Medikamenten mit Dosierung und Einnahmezeiten.
