@@ -8,16 +8,16 @@ Die Idee ist eine App zu erstellen mit der Nutzer ihre Medikamentenliste verwalt
 
 ### Funktionen:
 1. **Benutzerkonten**:
-   - Registrierung und Login für personalisierte Medikamentenlisten.
+   Registrierung und Login für personalisierte Medikamentenlisten.
 2. **Medikamentenverwaltung**:
-   - Hinzufügen, Bearbeiten und Löschen von Medikamenten mit Dosierung und Einnahmezeiten.
+   Hinzufügen, Bearbeiten und Löschen von Medikamenten mit Dosierung und Einnahmezeiten.
 3. **Erinnerungen**:
-   - Push-Benachrichtigungen zur rechtzeitigen Einnahme.
+   Push-Benachrichtigungen zur rechtzeitigen Einnahme.
 
 ### Zielgruppe:
-- **Patienten**: Personen, die regelmäßig Medikamente einnehmen müssen.
+**Patienten**: Personen, die regelmäßig Medikamente einnehmen müssen.
 
 ### Nutzen:
-- **Zuverlässige Medikamenteneinnahme**: Unterstützung durch Erinnerungen und einfache Verwaltung.
+**Zuverlässige Medikamenteneinnahme**: Unterstützung durch Erinnerungen und einfache Verwaltung.
 
 Medi-SelfReminder sorgt für eine zuverlässige Medikamenteneinnahme und unterstützt Benutzer durch Erinnerungen und eine benutzerfreundliche Verwaltung ihrer Medikamentenlisten.
