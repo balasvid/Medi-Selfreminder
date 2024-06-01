@@ -2,9 +2,9 @@
 
 Team: Sen Sutnuka & Vidya Balasubramaniam
 
-### Beschreibung::
+### Beschreibung:
 
-Die Idee ist eine App zu erstellen mit der Nutzer ihre Medikamentenliste verwalten können und Erinnerungen per SMS erhalten, um ihre Medikamente rechtzeitig einzunehmen.
+Medi-Selfreminder sorgt für eine zuverlässige Medikamenteneinnahme und unterstützt Benutzer durch Erinnerungen und eine benutzerfreundliche Verwaltung ihrer Medikamentenlisten.
 
 ### Funktionen:
 1. **Benutzerkonto**:
@@ -20,4 +20,4 @@ Die Idee ist eine App zu erstellen mit der Nutzer ihre Medikamentenliste verwalt
 ### Nutzen:
 **Zuverlässige Medikamenteneinnahme**: Unterstützung durch Erinnerungen und einfache Verwaltung.
 
-Medi-Selfreminder sorgt für eine zuverlässige Medikamenteneinnahme und unterstützt Benutzer durch Erinnerungen und eine benutzerfreundliche Verwaltung ihrer Medikamentenlisten.
+
