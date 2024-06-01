@@ -5,7 +5,7 @@ Version 1.0
 Funktionen:
 - Medikamentenhinzufügung: Benutzer können Medikamente hinzufügen, indem sie den Namen, die Dosierung und die Einnahmezeit eingeben.
 - Täglicher Überblick: Ein Dashboard zeigt eine Liste der für den Tag geplanten Medikamente an.
-- Einfaches Profil: Benutzer können ein Profil erstellen und grundlegende Informationen wie Name und Geburtsdatum speichern.
+- Einfaches Profil: Benutzer können ein Profil erstellen.
 
 Zeitplan:
 - Woche 1-2: Implementierung der Funktionen zur Medikamentenhinzufügung und Erstellung des Profils.
