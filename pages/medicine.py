@@ -13,6 +13,15 @@ st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="cen
 # Show the navigation menu
 menu_with_redirect()
 
+if 'edit_mode' not in st.session_state:
+    st.session_state.edit_mode = False
+
+if 'edit_data' not in st.session_state:
+    st.session_state.edit_data = None
+
+if 'hide_pdf_download_button' not in st.session_state or st.session_state.hide_pdf_download_button is False:
+    st.session_state.hide_pdf_download_button = True
+
 def edit_medication(username, medication_name, dosage, day, time):
     edited_medication_name = st.text_input('Edit the name of the medicine', value=medication_name, key='edit_med_name')
     edited_dosage_amount = st.text_input('Edit the dosage', value=dosage, key='edit_dosage')
@@ -148,21 +157,23 @@ def display_medication(username):
                     if st.button("Generate PDF"):
                         pdf_file = generate_pdf(df)
                         st.session_state.pdf_file = pdf_file
+                        st.session_state.hide_pdf_download_button = False
 
                 # Add a download button for the table as PDF
                 with col3:
-                    if 'pdf_file' in st.session_state:
-                        with open(st.session_state.pdf_file, "rb") as f:
-                            st.download_button(
-                                label="Download table as PDF",
-                                data=f,
-                                file_name='medication_data.pdf',
-                                mime='application/pdf'
-                            )
+                    if st.session_state.hide_pdf_download_button == False:
+                        if 'pdf_file' in st.session_state:
+                            with open(st.session_state.pdf_file, "rb") as f:
+                                st.download_button(
+                                    label="Download table as PDF",
+                                    data=f,
+                                    file_name='medication_data.pdf',
+                                    mime='application/pdf'
+                                )
 
             else:
                 st.write("No medication data to display.")
-                image_path = "tablets_pills_capsules.jpg"
+                image_path = "images/tablets_pills_capsules.jpg"
                 st.image(image_path, use_column_width=True)
 
 st.title("🧾 Medicine")

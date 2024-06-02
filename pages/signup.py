@@ -46,5 +46,5 @@ with col2:
     #if st.button("Log in here"):
     #    st.switch_page("pages/login.py")
         
-image_path = "tablets_pills_capsules.jpg"
+image_path = "images/tablets_pills_capsules.jpg"
 st.image(image_path, use_column_width=True)

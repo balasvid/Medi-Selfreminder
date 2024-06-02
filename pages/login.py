@@ -9,6 +9,9 @@ st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="cen
 # Show the navigation menu
 menu()
 
+if 'username' not in st.session_state:
+    st.session_state.username = None
+
 def login_user(username, password):
     with open_db_connection() as conn:
         c = conn.cursor()
@@ -45,5 +48,5 @@ with col2:
     #    st.switch_page("pages/signup.py")
     st.page_link("pages/signup.py", label="Sign up for Medi-Selfreminder")
 
-image_path = "tablets_pills_capsules.jpg"
+image_path = "images/tablets_pills_capsules.jpg"
 st.image(image_path, use_column_width=True)
