@@ -1,4 +1,4 @@
-reportlab.pdfgen import canvas
+reportlab.pdfgen
 from contextlib import contextmanager
 datetime
 from reportlab.lib.pagesizes import letter
