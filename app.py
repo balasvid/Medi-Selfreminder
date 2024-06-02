@@ -59,17 +59,10 @@ def main():
     if "user_logged_in" not in st.session_state:
         st.session_state.user_logged_in = False
 
+    # Show the navigation menu
     menu()
     
-    if 'edit_mode' not in st.session_state:
-        st.session_state.edit_mode = False
-    
-    if 'edit_data' not in st.session_state:
-        st.session_state.edit_data = None
-
-    if 'username' not in st.session_state:
-        st.session_state.username = None
-
+    #Switch to Log in page
     st.switch_page("pages/login.py")
 
 
