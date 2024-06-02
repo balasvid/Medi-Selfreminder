@@ -1,12 +1,11 @@
 reportlab.pdfgen
-from contextlib import contextmanager
+contextlib
 datetime
-from reportlab.lib.pagesizes import letter
-from menu import menu
-from menu import menu_with_redirect
-from db import open_db_connection
+reportlab.lib.pagesizes
+menu
+db
 pandas
-from passlib.hash import sha256_crypt
+passlib.hash
 sqlite3
 streamlit
 tempfile
