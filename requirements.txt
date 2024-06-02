@@ -1,12 +1,12 @@
-canvas
-contextmanager
+from reportlab.pdfgen import canvas
+from contextlib import contextmanager
 datetime
-letter
-menu
-menu_with_redirect
-open_db_connection
+from reportlab.lib.pagesizes import letter
+from menu import menu
+from menu import menu_with_redirect
+from db import open_db_connection
 pandas
-sha256_crypt
+from passlib.hash import sha256_crypt
 sqlite3
 streamlit
 tempfile
