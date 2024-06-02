@@ -1,5 +1,3 @@
-# Text content
-text_content = """
 ### Reflexion & Learning
 
 #### Herausforderungen
@@ -23,7 +21,7 @@ Durch die Entwicklung der Medikamentenliste haben wir erneut festgestellt und ge
 #### Schlussfolgerung
 
 Insgesamt sind wir stolz und zufrieden, die gestellte Aufgabe erfolgreich abgeschlossen zu haben, und überzeugt, die gewonnenen und wertvollen Erfahrungen auch in zukünftige Herausforderungen einfliessen lassen zu können.
-"""
+
 
 
 
