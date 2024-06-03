@@ -1,7 +1,6 @@
 import streamlit as st
 from lib.menu import menu
 from lib.db import open_db_connection
-#from lib.argon2 import PasswordHasher
 from passlib.hash import sha256_crypt
 
 # Set the page configuration
@@ -9,9 +8,6 @@ st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="cen
 
 # Show the navigation menu
 menu()
-
-# Create an instance of PasswordHasher
-#ph = PasswordHasher()
 
 if 'username' not in st.session_state:
     st.session_state.username = None
@@ -24,7 +20,6 @@ def login_user(username, password):
         if data is None:
             st.error("Invalid Username/Password")
         else:
-            #if ph.verify(data[1], password):
             if sha256_crypt.verify(password, data[1]):
                 st.success("Logged In as {}".format(username))
                 st.session_state.initial_notification = False

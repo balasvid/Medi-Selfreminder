@@ -1,7 +1,7 @@
 import streamlit as st
 from lib.menu import menu
 from lib.db import open_db_connection
-from lib.argon2 import PasswordHasher
+from passlib.hash import sha256_crypt
 
 # Set the page configuration
 st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="centered")
@@ -9,11 +9,8 @@ st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="cen
 # Show the navigation menu
 menu()
 
-# Create an instance of PasswordHasher
-ph = PasswordHasher()
-
 def create_user(username, password, first_name, last_name, gender, birthday, weight, height):
-    hashed_pswd = ph.hash(password)
+    hashed_pswd = sha256_crypt.hash(password)
     with open_db_connection() as conn:
         c = conn.cursor()
         c.execute('INSERT INTO users(username, password, first_name, last_name, gender, birthday, weight, height) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', (username, hashed_pswd, first_name, last_name, gender, birthday, weight, height))
