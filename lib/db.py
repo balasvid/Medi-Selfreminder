@@ -1,5 +1,5 @@
 import sqlite3
-from lib.contextlib import contextmanager
+from contextlib import contextmanager
 import threading
 
 # Thread-local storage for database connection
