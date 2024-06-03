@@ -1,7 +1,7 @@
 import streamlit as st
-from menu import menu
-from db import open_db_connection
-from passlib.hash import sha256_crypt
+from lib.menu import menu
+from lib.db import open_db_connection
+from lib.passlib.hash import sha256_crypt
 
 # Set the page configuration
 st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="centered")
