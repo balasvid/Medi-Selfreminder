@@ -3,4 +3,5 @@ datetime
 letter
 pandas
 passlib
+reportlab
 streamlit
