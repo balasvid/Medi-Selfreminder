@@ -18,7 +18,7 @@ Medi-Selfreminder sorgt für eine zuverlässige Medikamenteneinnahme und unterst
 6. **Krankenversicherungsinformationen**:
    Krankenversicherungsdetail eingeben und einsehen.
 7. **Medikamentenliste exportieren**:
-   Medikamentenliste als CSV- und PDF-Datei aufrufen 
+   Medikamentenliste als CSV- und PDF-Datei aufrufen.
    
 ### Zielgruppe:
 **Patienten**: Personen, die regelmässig Medikamente einnehmen müssen.
