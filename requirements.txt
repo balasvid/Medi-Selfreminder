@@ -2,7 +2,6 @@ canvas
 datetime
 letter
 menu
-open_db_connection
 pandas
 sha256_crypt
 sqlite3
