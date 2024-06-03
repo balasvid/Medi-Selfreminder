@@ -3,7 +3,6 @@ datetime
 letter
 menu
 pandas
-sha256_crypt
 sqlite3
 streamlit
 tempfile
