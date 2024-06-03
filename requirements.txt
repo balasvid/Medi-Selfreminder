@@ -3,7 +3,6 @@ datetime
 letter
 menu
 pandas
-sqlite3
 streamlit
 tempfile
 threading
