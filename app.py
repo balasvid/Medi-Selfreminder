@@ -1,6 +1,6 @@
 import streamlit as st
-from menu import menu
-from db import open_db_connection
+from lib.menu import menu
+from lib.db import open_db_connection
 
 # Create tables if they don't exist
 with open_db_connection() as conn:
@@ -61,7 +61,7 @@ def main():
 
     # Show the navigation menu
     menu()
-    
+
     #Switch to Log in page
     st.switch_page("pages/login.py")
 
