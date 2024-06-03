@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 import datetime
-from menu import menu_with_redirect
-from db import open_db_connection
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
+from lib.menu import menu_with_redirect
+from lib.db import open_db_connection
+from lib.reportlab.lib.pagesizes import letter
+from lib.reportlab.pdfgen import canvas
 import tempfile
 
 # Set the page configuration

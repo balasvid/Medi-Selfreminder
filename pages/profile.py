@@ -1,6 +1,6 @@
 import streamlit as st
-from menu import menu_with_redirect
-from db import open_db_connection
+from lib.menu import menu_with_redirect
+from lib.db import open_db_connection
 
 # Set the page configuration
 st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="centered")
