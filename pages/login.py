@@ -1,7 +1,7 @@
 import streamlit as st
 from lib.menu import menu
 from lib.db import open_db_connection
-from lib.passlib.hash import sha256_crypt
+from lib.bcrypt import checkpw
 
 # Set the page configuration
 st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="centered")
@@ -20,7 +20,7 @@ def login_user(username, password):
         if data is None:
             st.error("Invalid Username/Password")
         else:
-            if sha256_crypt.verify(password, data[1]):
+            if checkpw(password.encode('utf-8'), data[1]):
                 st.success("Logged In as {}".format(username))
                 st.session_state.initial_notification = False
                 st.session_state.user_logged_in = True

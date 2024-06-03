@@ -1,7 +1,7 @@
 import streamlit as st
 from lib.menu import menu
 from lib.db import open_db_connection
-from lib.passlib.hash import sha256_crypt
+from lib.bcrypt import hashpw, gensalt 
 
 # Set the page configuration
 st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="centered")
@@ -10,7 +10,7 @@ st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="cen
 menu()
 
 def create_user(username, password, first_name, last_name, gender, birthday, weight, height):
-    hashed_pswd = sha256_crypt.hash(password)
+    hashed_pswd = hashpw(password.encode('utf-8'), gensalt())
     with open_db_connection() as conn:
         c = conn.cursor()
         c.execute('INSERT INTO users(username, password, first_name, last_name, gender, birthday, weight, height) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', (username, hashed_pswd, first_name, last_name, gender, birthday, weight, height))
