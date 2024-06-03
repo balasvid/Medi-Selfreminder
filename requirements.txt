@@ -1,9 +1,9 @@
-reportlab.pdfgen
+lib.reportlab.pdfgen
 contextlib
 datetime
-reportlab.lib.pagesizes
-menu
-db
+lib.reportlab.lib.pagesizes
+lib.menu
+lib.db
 pandas
 passlib.hash
 sqlite3
