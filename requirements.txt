@@ -1,7 +1,6 @@
 canvas
 datetime
 letter
-menu
 pandas
 passlib
 streamlit
