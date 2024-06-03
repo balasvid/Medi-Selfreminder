@@ -1,13 +1,16 @@
 import streamlit as st
 from lib.menu import menu
 from lib.db import open_db_connection
-from lib.bcrypt import checkpw
+from lib.argon2 import PasswordHasher
 
 # Set the page configuration
 st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="centered")
 
 # Show the navigation menu
 menu()
+
+# Create an instance of PasswordHasher
+ph = PasswordHasher()
 
 if 'username' not in st.session_state:
     st.session_state.username = None
@@ -20,14 +23,12 @@ def login_user(username, password):
         if data is None:
             st.error("Invalid Username/Password")
         else:
-            if checkpw(password.encode('utf-8'), data[1]):
+            if ph.verify(data[1], password):
                 st.success("Logged In as {}".format(username))
                 st.session_state.initial_notification = False
                 st.session_state.user_logged_in = True
                 st.session_state.username = username
                 st.switch_page("pages/medicine.py")
-                #st.session_state.page = 'Home'
-                #st.rerun()
             else:
                 st.error("Invalid Username/Password")
 
@@ -44,8 +45,6 @@ col1, col2 = st.columns([1.9, 6.3])
 with col1:
     st.write("Don't have an account?")
 with col2:
-    #if st.button("Sign up for Medi-Selfreminder"):
-    #    st.switch_page("pages/signup.py")
     st.page_link("pages/signup.py", label="Sign up for Medi-Selfreminder")
 
 image_path = "images/tablets_pills_capsules.jpg"

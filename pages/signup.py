@@ -1,7 +1,7 @@
 import streamlit as st
 from lib.menu import menu
 from lib.db import open_db_connection
-from lib.bcrypt import hashpw, gensalt 
+from lib.argon2 import PasswordHasher
 
 # Set the page configuration
 st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="centered")
@@ -9,8 +9,11 @@ st.set_page_config(page_title="Medi-Selfreminder", page_icon="💊", layout="cen
 # Show the navigation menu
 menu()
 
+# Create an instance of PasswordHasher
+ph = PasswordHasher()
+
 def create_user(username, password, first_name, last_name, gender, birthday, weight, height):
-    hashed_pswd = hashpw(password.encode('utf-8'), gensalt())
+    hashed_pswd = ph.hash(password)
     with open_db_connection() as conn:
         c = conn.cursor()
         c.execute('INSERT INTO users(username, password, first_name, last_name, gender, birthday, weight, height) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', (username, hashed_pswd, first_name, last_name, gender, birthday, weight, height))
@@ -43,8 +46,6 @@ with col1:
     st.write("Already have an account?")
 with col2:
     st.page_link("pages/login.py", label="Log in here")
-    #if st.button("Log in here"):
-    #    st.switch_page("pages/login.py")
         
 image_path = "images/tablets_pills_capsules.jpg"
 st.image(image_path, use_column_width=True)
